@@ -81,7 +81,7 @@ public class Lab1JavaReview {
         
         int serialNumber;
         do {
-            serialNumber = rnd.nextInt(999998) + 1;
+            serialNumber = rnd.nextInt(99998) + 1;
         } while (isSerialNumberUsed(serialNumber));
 
         bookTitles[bookCount] = title;
@@ -114,7 +114,7 @@ public class Lab1JavaReview {
         }
 
         showBooks();
-        System.out.print("Enter the book Serial Number or Title to update its status: ");
+        System.out.print("Enter the book Serial Number: ");
         String input = scnr.nextLine().trim();
 
         int index = -1;
@@ -129,13 +129,9 @@ public class Lab1JavaReview {
                 }
             }
         } catch (NumberFormatException e) {
-            
-            for (int i = 0; i < bookCount; i++) {
-                if (bookTitles[i].equalsIgnoreCase(input)) {
-                    index = i;
-                    break;
-                }
-            }
+        System.out.println("Error :(");    
+        System.out.println("Please try to input serial number\n");  
+        return;
         }
 
         if (index <= -1) {
