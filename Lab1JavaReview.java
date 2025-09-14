@@ -109,7 +109,7 @@ public class Lab1JavaReview {
     public static void updateBookStatus(Scanner scnr) {
         if (bookCount == 0) {
             System.out.println("Error :( ");
-            System.out.println("No books available to update. Please Try Again" + "\nTaking you back to the Main menu\n");
+            System.out.println("\nNo books available to update. Please Try Again" + "\nTaking you back to the Main menu\n");
             return;
         }
 
@@ -129,13 +129,13 @@ public class Lab1JavaReview {
                 }
             }
         } catch (NumberFormatException e) {
-        System.out.println("Error :(");    
+        System.out.println("\nError :(");    
         System.out.println("Please try to input serial number\n");  
         return;
         }
 
         if (index <= -1) {
-            System.out.println("Book not found. Please check the Serial Number or Title and try again.");
+            System.out.println("Book not found. Please check the Serial Number");
             return;
         }
 
@@ -185,3 +185,4 @@ public class Lab1JavaReview {
         System.out.println("Borrowed Books: " + borrowed + "\n==============================");
     }
 }
+
