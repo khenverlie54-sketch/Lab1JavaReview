@@ -170,7 +170,7 @@ public class Lab1JavaReview {
     public static void generateReport() {
         int available = 0, borrowed = 0;
         for (int i = 0; i < bookCount; i++) {
-            if (bookStatus[i].equals("Available")) {
+            if (bookStatus[i].equals("[Available]")) {
                 available++;
             } else {
                 borrowed++;
@@ -185,4 +185,5 @@ public class Lab1JavaReview {
         System.out.println("Borrowed Books: " + borrowed + "\n==============================");
     }
 }
+
 
